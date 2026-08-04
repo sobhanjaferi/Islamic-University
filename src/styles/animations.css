@@ -1,0 +1,21 @@
+.cart1 {
+  animation: floatBezier 4s infinite;
+}
+
+.cart2 {
+  animation: floatBezier 4.9s infinite;
+}
+
+.cart3 {
+  animation: floatBezier 4.3s infinite;
+}
+
+@keyframes floatBezier {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+}
