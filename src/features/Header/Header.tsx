@@ -1,9 +1,12 @@
+import DesktopHeader from "./DesktopHeader";
 import MobileHeader from "./MobileHeader";
 
 const Header = () => {
   return (
     <header className="w-full">
-      <MobileHeader />
+      <MobileHeader className="xl:hidden" />
+
+      <DesktopHeader />
     </header>
   );
 };
