@@ -4,7 +4,6 @@ const HeroCarts = ({ observer }: { observer: boolean }) => {
   return (
     <Observer
       observer={observer}
-      delay="1000"
       className="hidden lg:block absolute left-15 top-55 max-w-130 h-80 -z-10"
     >
       <section className="w-52 h-22 p-4 rounded-2xl border-2 border-[#545c68] bg-[#3f4a575c] absolute left-0 top-0 cart1 flex justify-between items-center z-1">
@@ -46,7 +45,7 @@ const HeroCarts = ({ observer }: { observer: boolean }) => {
         </p>
 
         <div className="w-full h-1.5 bg-gray-700 rounded-full">
-          <div className="w-9/12 h-full bg-linear-to-l from-yellow-300 to-cyan-400 rounded-full"></div>
+          <div className={`${observer ? "w-10/12" : "w-0"} h-full bg-linear-to-l from-yellow-300 to-cyan-400 rounded-full transition-all duration-1000 ease-in-out`}></div>
         </div>
       </section>
 
