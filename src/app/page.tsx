@@ -1,7 +1,9 @@
+import ButtonArticle from "@/features/article/Button";
+
 const Home = () => {
   return (
-    <section>
-      <h1>Home</h1>
+    <section className="mt-12">
+      <ButtonArticle />
     </section>
   );
 };

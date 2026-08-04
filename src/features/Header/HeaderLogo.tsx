@@ -1,6 +1,6 @@
 const HeaderLogo = () => {
   return (
-    <section className="flex justify-center items-center gap-2 z-10 min-w-56">
+    <section className="flex justify-center items-center gap-2 z-20 min-w-53">
       <svg
         viewBox="0 0 24 24"
         fill="none"
@@ -16,7 +16,9 @@ const HeaderLogo = () => {
       </svg>
 
       <section className="flex flex-col gap-1">
-        <h2 className="font-bold text-white">صندوق پژوهش و فناوری</h2>
+        <h2 className="font-bold text-white text-[15px]">
+          صندوق پژوهش و فناوری
+        </h2>
         <span className="text-[12px] text-white/60 hidden sm:block">
           دانشگاه آزاد اسلامی
         </span>

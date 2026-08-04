@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-[#092934] xl:container xl:mx-auto" dir="rtl">
+      <body className="bg-[#092934] xl:container xl:mx-auto p-3 sm:px-7 sm:py-4" dir="rtl">
         <Header />
 
         <main>{children}</main>
