@@ -32,7 +32,7 @@ const MobileHeader = ({ className, ...otherProps }: Props) => {
     <>
       <section
         className={`${scroll && "bg-blue-950 backdrop-blur-[2px] opacity-90 fixed top-0 right-0 left-0"}
-        p-3 sm:px-7 sm:py-4 transition-all duration-300 ease-linear flex justify-between items-center
+        transition-all duration-300 ease-linear flex justify-between items-center
         ${className}`}
         {...otherProps}
       >
@@ -40,7 +40,7 @@ const MobileHeader = ({ className, ...otherProps }: Props) => {
 
         <IconButton
           onClick={handleClickMenu}
-          className="bg-[#1f2530] text-white outline-0 w-12 h-12 z-10"
+          className="bg-[#1f2530] text-white outline-0 w-12 h-12 z-50"
         >
           {isOpenMenu ? (
             <IoCloseOutline className="w-7 h-7" />
@@ -51,7 +51,7 @@ const MobileHeader = ({ className, ...otherProps }: Props) => {
       </section>
 
       <section
-        className={`text-white fixed left-0 right-0 bottom-0 top-0 bg-[#060e1a] Transition flex flex-col gap-12 justify-center items-center ${!isOpenMenu && "-z-10 opacity-0"}`}
+        className={`text-white fixed left-0 right-0 bottom-0 top-0 bg-[#060e1a] Transition flex flex-col gap-12 justify-center items-center ${!isOpenMenu ? "-z-30 opacity-0" : "z-10"}`}
       >
         <ul
           className={`flex flex-col items-center transition-all duration-300 ${isOpenMenu ? "gap-10" : "gap-14"} text-xl font-bold`}
@@ -61,7 +61,7 @@ const MobileHeader = ({ className, ...otherProps }: Props) => {
           ))}
         </ul>
 
-        <Button className="bg-linear-to-l from-[#dd7f09] to-[#f7b721] rounded-xl text-2xl px-7 py-4 shadow-[#d6790892] shadow-lg">
+        <Button className="bg-linear-to-l from-[#dd7f09] to-[#f7b721] rounded-xl text-xl px-6.5 py-4.5 shadow-[#d6790892] shadow-lg">
           ثبت درخواست تسهیلات
         </Button>
       </section>
