@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/styles/globals.css";
 import Header from "@/features/Header/Header";
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-[#092934]">
+      <body className="bg-[#092934] xl:container xl:mx-auto" dir="rtl">
         <Header />
 
         <main>{children}</main>

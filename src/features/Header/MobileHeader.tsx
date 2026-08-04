@@ -2,21 +2,19 @@
 
 import IconButton from "@/components/IconButton";
 import useScroll from "@/hooks/useScroll";
-import { useEffect, useState } from "react";
-import { v4 } from "uuid";
+import { ComponentProps, useEffect, useState } from "react";
 
 // ========== icons ==========
 
 import { IoCloseOutline } from "react-icons/io5";
 import { FiMenu } from "react-icons/fi";
 import Button from "@/components/Button";
+import HeaderLogo from "./HeaderLogo";
+import { Item, navItems } from "./NavItems";
 
-interface Item {
-  id: string;
-  title: string;
-}
+type Props = ComponentProps<"section">;
 
-const MobileHeader = () => {
+const MobileHeader = ({ className, ...otherProps }: Props) => {
   const scroll = useScroll({ scrollLength: 10 });
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
 
@@ -28,43 +26,18 @@ const MobileHeader = () => {
     setIsOpenMenu(!isOpenMenu);
   };
 
-  const listItems: Item[] = [
-    {
-      id: v4(),
-      title: "صفحه اصلی",
-    },
-    {
-      id: v4(),
-      title: "درباره صندوق",
-    },
-    {
-      id: v4(),
-      title: "خدمات",
-    },
-    {
-      id: v4(),
-      title: "تسهیلات",
-    },
-    {
-      id: v4(),
-      title: "اخبار و اطلاعیه ها",
-    },
-    {
-      id: v4(),
-      title: "مقالات",
-    },
-    {
-      id: v4(),
-      title: "تماس با ما",
-    },
-  ];
+  const listItems: Item[] = navItems;
 
   return (
     <>
       <section
         className={`${scroll && "bg-blue-950 backdrop-blur-[2px] opacity-90 fixed top-0 right-0 left-0"}
-        p-3 sm:px-7 sm:py-4 transition-all duration-300 ease-linear flex justify-between items-center`}
+        p-3 sm:px-7 sm:py-4 transition-all duration-300 ease-linear flex justify-between items-center
+        ${className}`}
+        {...otherProps}
       >
+        <HeaderLogo />
+
         <IconButton
           onClick={handleClickMenu}
           className="bg-[#1f2530] text-white outline-0 w-12 h-12 z-10"
@@ -75,32 +48,6 @@ const MobileHeader = () => {
             <FiMenu className="w-7 h-7" />
           )}
         </IconButton>
-
-        <section
-          className="flex justify-center items-center gap-2 z-10"
-          dir="rtl"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="w-13 bg-[#1baf9f] text-white rounded-2xl p-3 shadow-lg shadow-emerald-300/30 Transition cursor-pointer hover:-rotate-15 hover:p-2.5"
-          >
-            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-            <path d="M2 17l10 5 10-5"></path>
-            <path d="M2 12l10 5 10-5"></path>
-          </svg>
-
-          <section className="flex flex-col gap-1">
-            <h2 className="font-bold text-white">صندوق پژوهش و فناوری</h2>
-            <span className="text-[12px] text-white/60 hidden sm:block">
-              دانشگاه آزاد اسلامی
-            </span>
-          </section>
-        </section>
       </section>
 
       <section
