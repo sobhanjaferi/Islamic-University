@@ -31,7 +31,7 @@ const MobileHeader = ({ className, ...otherProps }: Props) => {
   return (
     <>
       <section
-        className={`${scroll && "bg-blue-950 backdrop-blur-[2px] opacity-90 fixed top-0 right-0 left-0"}
+        className={`${scroll && "bg-[#070e1c] backdrop-blur-[2px] opacity-90 fixed top-0 right-0 left-0 p-3 z-20"}
         transition-all duration-300 ease-linear flex justify-between items-center
         ${className}`}
         {...otherProps}
