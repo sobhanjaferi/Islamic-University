@@ -1,9 +1,11 @@
-import ButtonArticle from "@/features/article/Button";
+import Article from "@/features/article/Article";
 
 const Home = () => {
   return (
-    <section className="mt-12">
-      <ButtonArticle />
+    <section>
+      <Article />
+
+      <div className="h-200"></div>
     </section>
   );
 };
