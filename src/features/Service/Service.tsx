@@ -34,12 +34,12 @@ const Service = () => {
         </p>
       </Observer>
 
-      <section className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 w-full">
-        <Observer
-          observer={observer}
-          delay="1000"
-          className="flex flex-col justify-center items-start group"
-        >
+      <Observer
+        observer={observer}
+        delay="1000"
+        className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 w-full"
+      >
+        <section className="flex flex-col justify-center items-start group">
           <ServiceCart
             icon={
               <svg
@@ -58,13 +58,9 @@ const Service = () => {
             title="تسهیلات مالی"
             content="اعطای تسهیلات هدفمند با شرایط ویژه برای طرح‌های فناورانه، شرکت‌های دانش‌بنیان و واحدهای نوآور دانشگاهی"
           />
-        </Observer>
+        </section>
 
-        <Observer
-          observer={observer}
-          delay="1000"
-          className="flex flex-col justify-center items-start group"
-        >
+        <section className="flex flex-col justify-center items-start group">
           <ServiceCart
             icon={
               <svg
@@ -82,13 +78,9 @@ const Service = () => {
             title="ضمانت نامه بانکی"
             content="صدور انواع ضمانت‌نامه برای شرکت در مناقصات، پیش‌پرداخت، حسن انجام کار و تعهدات قراردادی فناوران"
           />
-        </Observer>
+        </section>
 
-        <Observer
-          observer={observer}
-          delay="1000"
-          className="flex flex-col justify-center items-start group"
-        >
+        <section className="flex flex-col justify-center items-start group">
           <ServiceCart
             icon={
               <svg
@@ -106,13 +98,9 @@ const Service = () => {
             title="سرمایه گذاری خطرپذیر"
             content="مشارکت در سرمایه‌گذاری استارتاپ‌ها و شرکت‌های دانش‌بنیان با پتانسیل رشد بالا در حوزه‌های فناوری پیشرفته"
           />
-        </Observer>
+        </section>
 
-        <Observer
-          observer={observer}
-          delay="1000"
-          className="flex flex-col justify-center items-start group"
-        >
+        <section className="flex flex-col justify-center items-start group">
           <ServiceCart
             icon={
               <svg
@@ -130,13 +118,9 @@ const Service = () => {
             title="مشاوره تخصصی"
             content="ارائه مشاوره در زمینه تدوین طرح کسب‌وکار، ارزیابی فناوری، مدل درآمدی و آماده‌سازی برای جذب سرمایه"
           />
-        </Observer>
+        </section>
 
-        <Observer
-          observer={observer}
-          delay="1000"
-          className="flex flex-col justify-center items-start group"
-        >
+        <section className="flex flex-col justify-center items-start group">
           <ServiceCart
             icon={
               <svg
@@ -155,13 +139,8 @@ const Service = () => {
             title="حمایت از تجاری سازی"
             content="همراهی فناوران در مسیر تبدیل ایده به محصول، ورود به بازار و توسعه مقیاس کسب‌وکار دانش‌بنیان"
           />
-        </Observer>
-
-        <Observer
-          observer={observer}
-          delay="1000"
-          className="flex flex-col justify-center items-start group"
-        >
+        </section>
+        <section className="flex flex-col justify-center items-start group">
           <ServiceCart
             icon={
               <svg
@@ -181,8 +160,8 @@ const Service = () => {
             title="شبکه سازی و اتصال"
             content="ایجاد ارتباط میان فناوران، سرمایه‌گذاران، مراکز رشد و نهادهای صنعتی برای توسعه همکاری‌های راهبردی"
           />
-        </Observer>
-      </section>
+        </section>
+      </Observer>
     </section>
   );
 };

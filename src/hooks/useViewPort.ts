@@ -20,7 +20,7 @@ const useViewPort = ({ targetRef }: Props) => {
           }
         });
       },
-      { threshold: 0.3 },
+      { threshold: 0.2 },
     );
 
     observer.observe(targetRef.current);
