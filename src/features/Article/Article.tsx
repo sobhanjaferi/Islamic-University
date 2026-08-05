@@ -17,7 +17,7 @@ const Article = () => {
   const observer = useViewPort({ targetRef: observRef });
 
   return (
-    <section className="bg-[#092934] p-3 sm:p-5 xl:px-10 2xl:px-40 pb-40 sm:pb-40 lg:pb-55">
+    <section className="bg-[#092934] p-3 sm:p-5 xl:px-10 2xl:px-40 pb-20 sm:pb-40 lg:pb-55">
       <section
         ref={observRef}
         className="w-full pt-20 flex flex-col justify-start items-start gap-8"
