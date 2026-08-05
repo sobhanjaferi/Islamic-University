@@ -45,7 +45,7 @@ const HeroCarts = ({ observer }: { observer: boolean }) => {
         </p>
 
         <div className="w-full h-1.5 bg-gray-700 rounded-full">
-          <div className={`${observer ? "w-10/12" : "w-0"} h-full bg-linear-to-l from-yellow-300 to-cyan-400 rounded-full transition-all duration-1000 ease-in-out`}></div>
+          <div className={`${observer ? "w-10/12" : "w-0"} h-full bg-linear-to-l from-[#fbbf24] to-[#2dd4bf] rounded-full transition-all duration-1000 ease-in-out`}></div>
         </div>
       </section>
 
