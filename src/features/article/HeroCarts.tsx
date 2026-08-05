@@ -4,7 +4,7 @@ const HeroCarts = ({ observer }: { observer: boolean }) => {
   return (
     <Observer
       observer={observer}
-      className="hidden lg:block absolute left-15 top-55 max-w-130 h-80 -z-10"
+      className="hidden lg:block absolute left-15 top-55 max-w-130 h-80"
     >
       <section className="w-52 h-22 p-4 rounded-2xl border-2 border-[#545c68] bg-[#3f4a575c] absolute left-0 top-0 cart1 flex justify-between items-center z-1">
         <svg

@@ -17,7 +17,7 @@ const Article = () => {
   const observer = useViewPort({ targetRef: observRef });
 
   return (
-    <>
+    <section className="bg-[#092934] lg:px-50 pb-60">
       <section
         ref={observRef}
         className="w-full pt-20 flex flex-col justify-start items-start gap-8"
@@ -64,7 +64,7 @@ const Article = () => {
       </section>
 
       <HeroCarts observer={observer} />
-    </>
+    </section>
   );
 };
 

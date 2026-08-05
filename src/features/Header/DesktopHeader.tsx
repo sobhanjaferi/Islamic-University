@@ -29,7 +29,7 @@ const DesktopHeader = ({ className, ...otherProps }: Props) => {
 
   return (
     <section
-      className={`w-full hidden xl:flex justify-between items-center ${className}`}
+      className={`w-full hidden xl:flex justify-between items-center bg-[#092934] p-3 sm:p-5 lg:px-50 ${className}`}
       {...otherProps}
     >
       <HeaderLogo />
