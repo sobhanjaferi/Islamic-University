@@ -2,12 +2,33 @@
 
 import Observer from "@/components/Observer";
 import useViewPort from "@/hooks/useViewPort";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import ServiceCart from "./ServiceCart";
 
 const Service = () => {
   const obserRef = useRef<HTMLSelectElement>(null);
   const observer = useViewPort({ targetRef: obserRef });
+
+  const [targetCart, setTargetCart] = useState<boolean[]>([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
+
+  const handleClickTargetCart = (index: number): void => {
+    setTargetCart((old): boolean[] => {
+      const clone = [...old];
+
+      const checkFalse = clone.map((item) => false);
+
+      checkFalse[index] = !checkFalse[index];
+
+      return checkFalse;
+    });
+  };
 
   return (
     <section
@@ -41,6 +62,8 @@ const Service = () => {
       >
         <section className="flex flex-col justify-center items-start group">
           <ServiceCart
+            targetCart={targetCart[0]}
+            onClick={() => handleClickTargetCart(0)}
             icon={
               <svg
                 viewBox="0 0 24 24"
@@ -49,7 +72,7 @@ const Service = () => {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="hover:p-2.5 w-15 p-3.5 bg-[#dbf1f1] text-[#1d897d] rounded-2xl Transition cursor-pointer hover:-rotate-15"
+                className="aspect-<ratio> hover:p-2.5 w-15 h-15 p-3.5 bg-[#dbf1f1] text-[#1d897d] rounded-2xl Transition cursor-pointer hover:-rotate-15"
               >
                 <rect x="2" y="5" width="20" height="14" rx="2"></rect>
                 <path d="M2 10h20"></path>
@@ -62,6 +85,8 @@ const Service = () => {
 
         <section className="flex flex-col justify-center items-start group">
           <ServiceCart
+            targetCart={targetCart[1]}
+            onClick={() => handleClickTargetCart(1)}
             icon={
               <svg
                 viewBox="0 0 24 24"
@@ -70,7 +95,7 @@ const Service = () => {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="hover:p-2.5 w-15 p-3.5 bg-[#ffedd0] text-[#d97706] rounded-2xl Transition cursor-pointer hover:-rotate-15"
+                className="aspect-<ratio> hover:p-2.5 w-15 h-15 p-3.5 bg-[#ffedd0] text-[#d97706] rounded-2xl Transition cursor-pointer hover:-rotate-15"
               >
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
@@ -82,6 +107,8 @@ const Service = () => {
 
         <section className="flex flex-col justify-center items-start group">
           <ServiceCart
+            targetCart={targetCart[2]}
+            onClick={() => handleClickTargetCart(2)}
             icon={
               <svg
                 viewBox="0 0 24 24"
@@ -90,7 +117,7 @@ const Service = () => {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="hover:p-2.5 w-15 p-3.5 bg-[#e7e9ec] text-[#163a5f] rounded-2xl Transition cursor-pointer hover:-rotate-15"
+                className="aspect-<ratio> hover:p-2.5 w-15 h-15 p-3.5 bg-[#e7e9ec] text-[#163a5f] rounded-2xl Transition cursor-pointer hover:-rotate-15"
               >
                 <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
               </svg>
@@ -102,6 +129,8 @@ const Service = () => {
 
         <section className="flex flex-col justify-center items-start group">
           <ServiceCart
+            targetCart={targetCart[3]}
+            onClick={() => handleClickTargetCart(3)}
             icon={
               <svg
                 viewBox="0 0 24 24"
@@ -110,7 +139,7 @@ const Service = () => {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="hover:p-2.5 w-15 p-3.5 bg-[#dbf1f1] text-[#0d9488] rounded-2xl Transition cursor-pointer hover:-rotate-15"
+                className="aspect-<ratio> hover:p-2.5 w-15 h-15 p-3.5 bg-[#dbf1f1] text-[#0d9488] rounded-2xl Transition cursor-pointer hover:-rotate-15"
               >
                 <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path>
               </svg>
@@ -122,6 +151,8 @@ const Service = () => {
 
         <section className="flex flex-col justify-center items-start group">
           <ServiceCart
+            targetCart={targetCart[4]}
+            onClick={() => handleClickTargetCart(4)}
             icon={
               <svg
                 viewBox="0 0 24 24"
@@ -130,7 +161,7 @@ const Service = () => {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="hover:p-2.5 w-15 p-3.5 bg-[#ffedd0] text-[#d97706] rounded-2xl Transition cursor-pointer hover:-rotate-15"
+                className="aspect-<ratio> hover:p-2.5 w-15 h-15 p-3.5 bg-[#ffedd0] text-[#d97706] rounded-2xl Transition cursor-pointer hover:-rotate-15"
               >
                 <circle cx="12" cy="12" r="10"></circle>
                 <path d="M12 6v6l4 2"></path>
@@ -142,6 +173,8 @@ const Service = () => {
         </section>
         <section className="flex flex-col justify-center items-start group">
           <ServiceCart
+            targetCart={targetCart[5]}
+            onClick={() => handleClickTargetCart(5)}
             icon={
               <svg
                 viewBox="0 0 24 24"
@@ -150,7 +183,7 @@ const Service = () => {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="hover:p-2.5 w-15 p-3.5 bg-[#e7e9ec] text-[#163a5f] rounded-2xl Transition cursor-pointer hover:-rotate-15"
+                className="aspect-<ratio> hover:p-2.5 w-15 h-15 p-3.5 bg-[#e7e9ec] text-[#163a5f] rounded-2xl Transition cursor-pointer hover:-rotate-15"
               >
                 <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
                 <circle cx="9" cy="7" r="4"></circle>

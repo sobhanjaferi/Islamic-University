@@ -51,10 +51,10 @@ const MobileHeader = ({ className, ...otherProps }: Props) => {
       </section>
 
       <section
-        className={`text-white fixed left-0 right-0 bottom-0 top-0 bg-[#070e1c] Transition flex flex-col gap-12 justify-center items-center ${!isOpenMenu ? "-z-30 opacity-0" : "z-10"}`}
+        className={`text-white fixed left-0 right-0 bottom-0 top-19 overflow-auto bg-[#070e1c] Transition flex flex-col gap-12 justify-center items-center ${!isOpenMenu ? "-z-30 opacity-0" : "z-10"}`}
       >
         <ul
-          className={`flex flex-col items-center transition-all duration-300 ${isOpenMenu ? "gap-10" : "gap-14"} text-xl font-bold`}
+          className={`flex flex-col items-center transition-all duration-300 ${isOpenMenu ? "gap-10" : "gap-14"} text-lg font-bold`}
         >
           {listItems.map((item) => (
             <li key={item.id}>{item.title}</li>
