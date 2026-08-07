@@ -2,10 +2,12 @@
 
 import Observer from "@/components/Observer";
 import useViewPort from "@/hooks/useViewPort";
-import { useRef, useState } from "react";
+import { ComponentProps, useRef, useState } from "react";
 import ServiceCart from "./ServiceCart";
 
-const Service = () => {
+type Props = ComponentProps<"section">;
+
+const Service = ({ id, ...otherProps }: Props) => {
   const obserRef = useRef<HTMLSelectElement>(null);
   const observer = useViewPort({ targetRef: obserRef });
 
@@ -34,6 +36,8 @@ const Service = () => {
     <section
       ref={obserRef}
       className="p-3 sm:p-5 xl:px-10 2xl:px-40 mt-15 flex flex-col justify-start items-center gap-20"
+      id={id}
+      {...otherProps}
     >
       <Observer
         observer={observer}

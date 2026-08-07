@@ -4,9 +4,9 @@ import Service from "@/features/Service/Service";
 const Home = () => {
   return (
     <section>
-      <Article />
+      <Article id="articles" />
 
-      <Service />
+      <Service id="services" />
 
       <div className="h-200"></div>
     </section>

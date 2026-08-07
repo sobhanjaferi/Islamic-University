@@ -4,7 +4,7 @@ import Button from "@/components/Button";
 import ButtonArticle from "./Button";
 
 import { FaArrowLeft } from "react-icons/fa6";
-import { useRef } from "react";
+import { ComponentProps, useRef } from "react";
 import useViewPort from "@/hooks/useViewPort";
 import Observer from "@/components/Observer";
 import StateBar from "./StateBar";
@@ -12,12 +12,18 @@ import StateBar from "./StateBar";
 import "@/styles/animations.css";
 import HeroCarts from "./HeroCarts";
 
-const Article = () => {
+type Props = ComponentProps<"section">;
+
+const Article = ({ id, ...otherProps }: Props) => {
   const observRef = useRef<HTMLSelectElement>(null);
   const observer = useViewPort({ targetRef: observRef });
 
   return (
-    <section className="bg-[#092934] p-3 sm:p-5 xl:px-10 2xl:px-40 pb-20 sm:pb-40 lg:pb-55">
+    <section
+      className="bg-[#092934] p-3 sm:p-5 xl:px-10 2xl:px-40 pb-20 sm:pb-40 lg:pb-55"
+      id={id}
+      {...otherProps}
+    >
       <section
         ref={observRef}
         className="w-full pt-20 flex flex-col justify-start items-start gap-8"

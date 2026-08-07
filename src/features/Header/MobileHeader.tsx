@@ -10,7 +10,8 @@ import { IoCloseOutline } from "react-icons/io5";
 import { FiMenu } from "react-icons/fi";
 import Button from "@/components/Button";
 import HeaderLogo from "./HeaderLogo";
-import { Item, navItems } from "./NavItems";
+import { navItems } from "./NavItems";
+import Link from "next/link";
 
 type Props = ComponentProps<"section">;
 
@@ -25,8 +26,6 @@ const MobileHeader = ({ className, ...otherProps }: Props) => {
   const handleClickMenu = (): void => {
     setIsOpenMenu(!isOpenMenu);
   };
-
-  const listItems: Item[] = navItems;
 
   return (
     <>
@@ -56,8 +55,12 @@ const MobileHeader = ({ className, ...otherProps }: Props) => {
         <ul
           className={`flex flex-col items-center transition-all duration-300 ${isOpenMenu ? "gap-10" : "gap-14"} text-lg font-bold`}
         >
-          {listItems.map((item) => (
-            <li key={item.id}>{item.title}</li>
+          {navItems.map((item) => (
+            <li key={item.id}>
+              <Link href={`/${item.link}`} onClick={handleClickMenu}>
+                {item.title}
+              </Link>
+            </li>
           ))}
         </ul>
 

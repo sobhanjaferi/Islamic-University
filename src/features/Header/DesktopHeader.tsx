@@ -9,9 +9,7 @@ import Link from "next/link";
 type Props = ComponentProps<"section">;
 
 const DesktopHeader = ({ className, ...otherProps }: Props) => {
-  const [urlPath, setUrlPath] = useState<string>(() =>
-    typeof window !== "undefined" ? window.location.hash || "#main" : "#main",
-  );
+  const [urlPath, setUrlPath] = useState<string>(() => "#main");
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -41,7 +39,10 @@ const DesktopHeader = ({ className, ...otherProps }: Props) => {
               key={item.id}
               className="relative inline-block group cursor-pointer"
             >
-              <Link href={item.link} onClick={() => setUrlPath(item.link)}>
+              <Link
+                href={`/${item.link}`}
+                onClick={() => setUrlPath(item.link)}
+              >
                 <span
                   className={`py-3 px-5 rounded-lg cursor-pointer hover:bg-[#252e3d] Transition outline-0 active:opacity-30 ${urlPath === item.link && "text-[#2cd2bd]"}`}
                 >
