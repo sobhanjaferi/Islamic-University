@@ -4,6 +4,7 @@ import Observer from "@/components/Observer";
 import useViewPort from "@/hooks/useViewPort";
 import { ComponentProps, useRef, useState } from "react";
 import ServiceCart from "./ServiceCart";
+import Title from "@/components/Title";
 
 type Props = ComponentProps<"section">;
 
@@ -43,11 +44,7 @@ const Service = ({ id, ...otherProps }: Props) => {
         observer={observer}
         className="flex flex-col justify-start items-center gap-5"
       >
-        <section className="text-[#2fa398] flex justify-center items-center gap-2">
-          <div className="w-5 h-0.5 bg-[#2fa398] mt-1.5"></div>
-
-          <span className="font-bold">خدمات صندوق</span>
-        </section>
+        <Title title="خدمات صندوق" />
 
         <h1 className="text-center text-2xl sm:text-3xl font-bold">
           مسیر مطمئن تأمین مالی برای کسب‌وکارهای نوآور
