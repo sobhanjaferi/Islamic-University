@@ -1,4 +1,5 @@
 import Article from "@/features/Article/Article";
+import Facilities from "@/features/Facilities/Facilities";
 import Service from "@/features/Service/Service";
 
 const Home = () => {
@@ -7,6 +8,8 @@ const Home = () => {
       <Article id="articles" />
 
       <Service id="services" />
+
+      <Facilities id="facilities" />
 
       <div className="h-200"></div>
     </section>

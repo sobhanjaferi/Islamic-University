@@ -35,7 +35,7 @@ const Service = ({ id, ...otherProps }: Props) => {
   return (
     <section
       ref={obserRef}
-      className="p-3 sm:p-5 xl:px-10 2xl:px-40 mt-15 flex flex-col justify-start items-center gap-20"
+      className="p-3 sm:p-5 xl:px-10 2xl:px-40 my-15 flex flex-col justify-start items-center gap-20"
       id={id}
       {...otherProps}
     >
