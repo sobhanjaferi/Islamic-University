@@ -1,6 +1,6 @@
 "use client";
 
-import { ComponentProps, Fragment, useRef } from "react";
+import { ComponentProps, useRef } from "react";
 import HeroCart from "./HeroCart";
 import useViewPort from "@/hooks/useViewPort";
 import Title from "@/components/Title";
